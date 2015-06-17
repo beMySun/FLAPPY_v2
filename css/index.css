@@ -1,0 +1,46 @@
+@import url(comm.css);
+@import url(animate.css);
+
+.pc-sec .macbook {position: relative; height: 592px; margin-top: 60px; background-image: url(../img/MacBook.png); background-size: cover; -webkit-animation: fadeInUpLight .8s .2s both; animation: fadeInUpLight .8s .2s both;}
+.pc-sec .screen {position: absolute; top: 37px; right: 175px; bottom: 156px; left: 167px; background: url(../img/bg.jpg) center; background-size: cover; -webkit-animation: boot .8s 1.2s both; animation: boot .8s 1.2s both;}
+.pc-sec svg {display: none; position: absolute; bottom: 0; width: 100%; height: 640px; overflow: hidden; -webkit-transition: all 1s; transition: all 1s;}
+.pc-sec .screen .txt-top, .pc-sec .screen .txt-bottom {font-size: 28px; color: #66cc88; position: absolute; left: 0; right: 0; text-align: center;}
+.pc-sec .screen .txt-top {top: 18%; -webkit-animation: fadeInLeftLight .8s 2s both; animation: fadeInLeftLight .8s 2s both;}
+.pc-sec .screen .txt-bottom {top: 28%; -webkit-animation: fadeInRightLight .8s 2s both; animation: fadeInRightLight .8s 2s both;}
+.pc-sec .screen .mask {width: 64px; height: 64px; background-color: rgba(0,0,0,.2); border-radius: 50%; position: absolute; top: 0; bottom: 0; left: 0; right: 0; margin: auto; cursor: pointer; -webkit-transition: all .8s; transition: all .8s; -webkit-animation: bounceIn .8s 2.8s backwards; animation: bounceIn .8s 2.8s backwards;}
+.pc-sec .screen .mask:hover {background-color: rgba(102,204,136,.6);}
+.pc-sec .screen .mask:after {content: ""; display: block; box-sizing: border-box; height: 100%; border: 1px solid #66cc88; border-radius: 50%; -webkit-animation: zoomOut 1.8s cubic-bezier(0.39, 0.58, 0.57, 1) infinite; animation: zoomOut 1.8s cubic-bezier(0.39, 0.58, 0.57, 1) infinite;}
+.pc-sec .screen .mask .btn:after {content: ""; display: block; width: 1px; height: 32px; background-color: white; position: absolute; left: 50%; top: 64%;}
+.pc-sec .screen.after .txt-top {-webkit-animation: fadeOutLeftLight .8s both; animation: fadeOutLeftLight .8s both;}
+.pc-sec .screen.after .txt-bottom {-webkit-animation: fadeOutRightLight .8s both; animation: fadeOutRightLight .8s both;}
+.pc-sec .screen.after svg {display: block;}
+.pc-sec .screen.after .mask {border-radius: 0; width: 100%; height: 100%; -webkit-transition-delay: .8s; transition-delay: .8s;}
+.pc-sec .screen.after .mask:hover {background-color: rgba(0,0,0,.2);}
+.pc-sec .screen.after .mask:after {display: none;}
+.pc-sec .screen.after .mask .btn {opacity: .6; -webkit-transform: translate3d(250px,125px,0); transform: translate3d(250px,125px,0);}
+
+@-webkit-keyframes boot {
+	0% {-webkit-transform: scale(0,.01);}
+	50% {-webkit-transform: scale(1,.01);}
+	100% {-webkit-transform: scale(1,1);}
+}
+@keyframes boot {
+	0% {transform: scale(0,.01);}
+	50% {transform: scale(1,.01);}
+	100% {transform: scale(1,1);}
+}
+@-webkit-keyframes zoomOut {
+	0% {-webkit-transform: scale(1); opacity: 1;}
+	100% {-webkit-transform: scale(1.4); opacity: 0;}
+}
+@keyframes zoomOut {
+	0% {transform: scale(1); opacity: 1;}
+	100% {transform: scale(1.4); opacity: 0;}
+}
+
+.main-sec {background-color: rgba(107,203,139,.6);}
+.main-sec .content {position: relative; height: 400px;}
+.main-sec .content .box {height: 400px; width: 33.33%; background-color: #59b377; background-size: cover; background-position: center; position: absolute; left: 0; right: 0; margin: auto; box-shadow: 0 0 10px rgba(0,0,0,.2); -webkit-transition: all .4s; transition: all .4s;}
+.main-sec .content .box:nth-child(1):after {content: "Finding spiritual home ~"; display: block; width: 100%; color: white; line-height: 80px; font-size: 20px; text-align: center; background-image: -webkit-gradient(linear,0% 0%, 0% 100%, from(rgba(0,0,0,0)), to(rgba(0,0,0,.6))); position: absolute; bottom: 0;}
+.main-sec .content .box:nth-child(2):after {content: "Enjoy lost in the air ~"; display: block; width: 100%; color: white; line-height: 80px; font-size: 20px; text-align: center; background-image: -webkit-gradient(linear,0% 0%, 0% 100%, from(rgba(0,0,0,0)), to(rgba(0,0,0,.6))); position: absolute; bottom: 0;}
+.main-sec .content .box:nth-child(3):after {content: "Stopped to rest ~"; display: block; width: 100%; color: white; line-height: 80px; font-size: 20px; text-align: center; background-image: -webkit-gradient(linear,0% 0%, 0% 100%, from(rgba(0,0,0,0)), to(rgba(0,0,0,.6))); position: absolute; bottom: 0;}
